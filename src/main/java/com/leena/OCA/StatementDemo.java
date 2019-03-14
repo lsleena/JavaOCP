@@ -1,6 +1,6 @@
 package com.leena.OCA;
 
-public class TestStatement {
+public class StatementDemo {
 
     public void switchCaseDemo() {
 
@@ -76,11 +76,11 @@ public class TestStatement {
 
     public static void main(String[] args) {
 
-        TestStatement test = new TestStatement();
+        StatementDemo test = new StatementDemo();
 
         test.switchCaseDemo();
 
-        TestStatement.breakExample();
+        StatementDemo.breakExample();
 
 
         System.out.println("\n****************");

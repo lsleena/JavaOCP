@@ -1,6 +1,6 @@
 package com.leena.OCA;
 
-public class TestOperator {
+public class OperatorsDemo {
 
     public static void main(String[] args) {
 
