@@ -1,5 +1,6 @@
 package com.leena.OCA;
 
+import java.time.LocalTime;
 import java.util.*;
 
 public class ArrayListDemo {
@@ -35,5 +36,28 @@ public class ArrayListDemo {
         System.out.println(birds.size());
         birds.add("hawk");
         birds.add("hawk");
+
+
+        Set<Integer> j = new HashSet<Integer>();
+        Map<Integer, String> mp = new Hashtable<Integer, String>();
+        mp.put(9, "leena");
+        System.out.println(mp);
+        j.add(9);
+        j.add(9);
+        System.out.println(j);
+
+        System.out.println(Boolean.valueOf("FALSE"));
+
+
+        //array n arraylist conversion
+
+        List<String> lists = new ArrayList();
+        lists.add("hawk");
+        lists.add("robin");
+        Object[] objectArray = lists.toArray();
+        System.out.println(objectArray.length); // 2
+        String[] stringArray = lists.toArray(new String[0]);
+        System.out.println(stringArray.length);
+
     }
 }
