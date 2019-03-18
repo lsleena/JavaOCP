@@ -9,8 +9,8 @@ public class DateTime {
     public static void main(String[] args) {
 
 
-        LocalTime time = LocalTime.of(6, 15); // hour and minute
-        LocalTime time2 = LocalTime.of(6, 15, 30); // + seconds
+        LocalTime time = LocalTime.of(6, 15);
+        LocalTime time2 = LocalTime.of(6, 15, 30);
         LocalTime time3 = LocalTime.of(6, 15, 30, 200);
 
         LocalTime time1 = LocalTime.of(6, 15);
@@ -41,7 +41,7 @@ public class DateTime {
 
         Period annually = Period.ofYears(1);
         Period quarterly = Period.ofMonths(3);
-
+        System.out.println(" Annually:  "+annually +" Quarterly: "+ quarterly);
         Period everyThreeWeeks = Period.ofWeeks(3);
         Period everyOtherDay = Period.ofDays(2);
         Period everyYearAndAWeek = Period.of(1, 0, 7);
