@@ -40,7 +40,32 @@ class Square extends Shapes {
     }
 }
 
-public class RunTimePolyDemo {
+
+class Primate {
+
+    public boolean hasHair() {
+
+        return true;
+    }
+}
+
+interface HasTail {
+
+    public boolean isTailStriped();
+}
+
+class Lemur extends Primate implements HasTail {
+
+    public boolean isTailStriped() {
+
+        return false;
+    }
+
+    public int age = 10;
+}
+
+
+class RunTimePolyDemo {
 
     public static void main(String[] args) {
 
@@ -51,6 +76,14 @@ public class RunTimePolyDemo {
         Square square = new Square(5.0);
 
         square.area();
+
+        System.out.println("\nPoly - morphism with lemur object \n");
+        Lemur lemur = new Lemur();
+        System.out.println(lemur.age);
+        HasTail hasTail = lemur;
+        System.out.println(hasTail.isTailStriped());
+        Primate primate = lemur;
+        System.out.println(primate.hasHair());
 
     }
 }
