@@ -54,6 +54,39 @@ class Zebra extends Animal {
     }
 }
 
+class Canine {
+
+    public double getAverageWeight() {
+        return 50;
+    }
+}
+
+class Wolf extends Canine {
+
+    public double getAverageWeight() {
+        return super.getAverageWeight() + 20;
+    }
+}
+
+class Parent {
+
+    Parent()
+    {
+        System.out.println("Parent class's No " +
+                " arg constructor");
+    }
+}
+
+class Child extends Parent {
+    Child()
+    {
+        super();
+        System.out.println("Flow comes back from " +
+                "Parent class no arg const");
+    }
+
+}
+
 public class InheritanceDemo {
 
     public static void main(String[] args) {
@@ -66,6 +99,11 @@ public class InheritanceDemo {
 
         Zebra animal = new Zebra(14);
 
+        System.out.println(new Canine().getAverageWeight());
+        System.out.println(new Wolf().getAverageWeight());
+
+        new Child();
+        System.out.println("Inside Main");
 
     }
 }
