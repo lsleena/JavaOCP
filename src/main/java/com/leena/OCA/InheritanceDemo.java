@@ -27,6 +27,33 @@ class B extends A {
     }
 }
 
+class Animal {
+
+    private int age;
+
+    public Animal(int age) {
+
+        super();
+        this.age = age;
+        System.out.println(age);
+
+    }
+}
+
+class Zebra extends Animal {
+
+    public Zebra(int age) {
+
+        super(age);
+        System.out.println(age);
+    }
+
+    public Zebra() {
+
+        super(4);
+    }
+}
+
 public class InheritanceDemo {
 
     public static void main(String[] args) {
@@ -36,6 +63,9 @@ public class InheritanceDemo {
         b.displayFromB();
         // calling the method of class A using class B object
         b.displayFromA();
+
+        Zebra animal = new Zebra(14);
+
 
     }
 }
