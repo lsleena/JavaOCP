@@ -67,7 +67,7 @@ class Lemur extends Primate implements HasTail {
 
 class RunTimePolyDemo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ArrayIndexOutOfBoundsException {
 
         Circles circle = new Circles(2);
 
