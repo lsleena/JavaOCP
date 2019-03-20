@@ -54,6 +54,22 @@ public class ExceptionDemo {
             System.out.println(ex.getMessage());
         }
 
+        int x[] = {0};
+        try{
+            int y = 7/x[1];
+
+        } catch(ArithmeticException aExp) {
+
+            aExp.printStackTrace();
+
+        }catch(ArrayIndexOutOfBoundsException aiExp) {
+
+            aiExp.printStackTrace();
+        }
+
+
         doNotCodeThis(10);
+
+
     }
 }
