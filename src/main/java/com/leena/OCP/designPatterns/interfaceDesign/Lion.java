@@ -13,6 +13,23 @@ interface Run extends Walk {
     abstract double getMaxSpeed();
 }
 
+interface Hunt { }
+
+class Tiger implements Walk, Hunt {
+
+    @Override
+    public boolean isQuadraped() {
+
+        return true;
+    }
+
+    @Override
+    public double getMaxSpeed() {
+        return 0;
+    }
+
+}
+
 public class Lion implements Run {
 
 
