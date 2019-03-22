@@ -10,7 +10,7 @@ public class Animal {
 
         species = speciesName;
         canHop = hopper;
-        canHop = swimmer;
+        canSwim = swimmer;
     }
 
     public boolean canHop() { return canHop; }
