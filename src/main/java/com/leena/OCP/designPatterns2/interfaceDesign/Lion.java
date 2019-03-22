@@ -1,4 +1,4 @@
-package com.leena.OCP.designPatterns.interfaceDesign;
+package com.leena.OCP.designPatterns2.interfaceDesign;
 
 
 interface Walk {

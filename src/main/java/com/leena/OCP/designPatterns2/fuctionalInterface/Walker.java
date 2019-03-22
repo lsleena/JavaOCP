@@ -1,6 +1,6 @@
-package com.leena.OCP.classDesign.fuctionalInterface;
+package com.leena.OCP.designPatterns2.fuctionalInterface;
 
-import com.leena.OCP.designPatterns.interfaceDesign.Lion;
+import com.leena.OCP.designPatterns2.interfaceDesign.Lion;
 
 
 //not @FunctionalInterface - no abstract method

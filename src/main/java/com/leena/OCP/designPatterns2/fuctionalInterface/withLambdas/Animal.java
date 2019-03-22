@@ -1,4 +1,4 @@
-package com.leena.OCP.classDesign.fuctionalInterface.withLambdas;
+package com.leena.OCP.designPatterns2.fuctionalInterface.withLambdas;
 
 public class Animal {
 

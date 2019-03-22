@@ -1,7 +1,7 @@
-package com.leena.OCP.classDesign.fuctionalInterface;
+package com.leena.OCP.designPatterns2.fuctionalInterface;
 
-import com.leena.OCP.designPatterns.interfaceDesign.Eagle;
-import com.leena.OCP.designPatterns.interfaceDesign.Lion;
+import com.leena.OCP.designPatterns2.interfaceDesign.Eagle;
+import com.leena.OCP.designPatterns2.interfaceDesign.Lion;
 
 @FunctionalInterface
 public interface Sprint {

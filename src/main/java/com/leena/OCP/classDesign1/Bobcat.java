@@ -1,4 +1,4 @@
-package com.leena.OCP.classDesign;
+package com.leena.OCP.classDesign1;
 
 public class Bobcat {
 
