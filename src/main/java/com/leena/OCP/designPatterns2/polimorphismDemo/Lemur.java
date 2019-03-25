@@ -36,5 +36,17 @@ public class Lemur extends Primate implements HasTail {
         Primate primate = lemur;
 
         System.out.println(primate.hasHair());
+
+        //casting object reference
+
+        Primate primate1 = lemur;
+
+        //Does not compile
+        //  Lemur lemur1 = primate1;
+
+        //casting object reference
+        Lemur lemur1 = (Lemur) primate1;
+
+
     }
 }
