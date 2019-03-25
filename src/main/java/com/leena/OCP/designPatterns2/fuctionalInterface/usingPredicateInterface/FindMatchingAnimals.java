@@ -1,5 +1,6 @@
 package com.leena.OCP.designPatterns2.fuctionalInterface.usingPredicateInterface;
 
+import java.util.function.Predicate;
 import com.leena.OCP.designPatterns2.fuctionalInterface.withLambdas.Animal;
 
 public class FindMatchingAnimals {
