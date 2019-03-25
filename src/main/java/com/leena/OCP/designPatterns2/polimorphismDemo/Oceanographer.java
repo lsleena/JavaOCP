@@ -36,6 +36,10 @@ public class Oceanographer {
 
     public static void main(String[] args) {
 
+        Oceanographer o = new Oceanographer();
+
+        o.checkSound(new Whale());
+        o.checkSound(new Dolphin());
 
     }
 }
