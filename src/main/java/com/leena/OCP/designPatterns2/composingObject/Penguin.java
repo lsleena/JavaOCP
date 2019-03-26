@@ -1,0 +1,39 @@
+package com.leena.OCP.designPatterns2.composingObject;
+
+
+class Flippers {
+
+    public void flap() {
+
+        System.out.println("Flippers flap back and forth");
+    }
+}
+
+class WebbedFeet {
+
+    public void kick() {
+
+        System.out.println("The webbed feet kick to and fro");
+    }
+}
+
+public class Penguin {
+
+    private final Flippers flippers;
+    private final WebbedFeet webbedFeet;
+
+
+    public Penguin() {
+
+        this.flippers = new Flippers();
+        this.webbedFeet = new WebbedFeet();
+    }
+
+    public void flap() {
+        this.flippers.flap();
+    }
+
+    public void kick() {
+        this.webbedFeet.kick();
+    }
+}

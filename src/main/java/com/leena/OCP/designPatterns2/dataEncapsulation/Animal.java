@@ -31,5 +31,31 @@ public class Animal {
         this.age = age;
     }
 
+    //JAVABEAN
+
+    private boolean playing;
+    private Boolean dancing;
+
+
+    public boolean isPlaying() {
+        return playing;
+    }
+
+    public Boolean getDancing() {
+        return dancing;
+    }
+
+    // Not a valid JavaBean -- Boolean wrapper should start with get, since it is an object
+
+    public Boolean isDancing() {
+        return dancing;
+    }
+
+    public static void main(String[] args) {
+
+        Animal animal = new Animal();
+
+        animal.isDancing();
+    }
 
 }
