@@ -1,5 +1,11 @@
 package com.leena.OCP.designPatterns2.polimorphismDemo;
 
+
+interface HasTail {
+
+    public boolean isTailStriped();
+}
+
 class Primate {
 
     public boolean hasHair() {
@@ -8,10 +14,6 @@ class Primate {
     }
 }
 
-interface HasTail {
-
-    public boolean isTailStriped();
-}
 
 public class Lemur extends Primate implements HasTail {
 

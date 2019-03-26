@@ -12,7 +12,7 @@ public class Fish {
         Fish fish = new Fish();
 
         //can not compile
-        Bird bird = (Fish) bird;
+        //Bird bird = (Fish) bird;
 
     }
 }
