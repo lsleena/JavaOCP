@@ -1,5 +1,10 @@
 package com.leena.OCP.designPatterns2.singletoneObject;
 
+
+/*
+instantiated the singleton object directly in the
+defi nition of the instance reference
+ */
 public class HayStorage {
 
     private int quantity = 0;
@@ -75,3 +80,4 @@ class LlamaTrainer{
     }
 
 }
+
