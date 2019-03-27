@@ -35,12 +35,12 @@ public class AnimalBuilder {
 
     public static void main(String[] args) {
 
-        AnimalBuilder duckBuilkder = new AnimalBuilder();
-        duckBuilkder
+        AnimalBuilder duckBuilder = new AnimalBuilder();
+        duckBuilder
                 .setAge(4)
                 .setFavoriteFoods(Arrays.asList("meat","more meat")).setSpecies("duck");
 
-        AnimalImmutable duck = duckBuilkder.build();
+        AnimalImmutable duck = duckBuilder.build();
 
         AnimalImmutable flamingo = new AnimalBuilder().setFavoriteFoods(Arrays.asList("algea","insects"))
                 .setSpecies("flamingo").build();
