@@ -49,11 +49,13 @@ public class Crate<T> {
         this.contents = contents;
     }
 
+
     public static void main(String[] args) {
 
         Elephant elephant = new Elephant("rabbit", true, true);
         Crate<Elephant> crateForElephant = new Crate<>();
 
+        Crate crate = new Crate();
         crateForElephant.packCrate(elephant);
         Elephant inNewHome = crateForElephant.emptyCrate();
 
@@ -63,11 +65,47 @@ public class Crate<T> {
         Elephant elephant1 = new Elephant("rabbit", true, true);
 
         Integer numPounds = 15_000;
-        System.out.println(
-                numPounds.toString()
+        System.out.println(numPounds.toString());
 
-        );
+        Robot r = (Robot) crate.emptyCrate();
 
+    }
+}
+
+class Robot {
+
+}
+
+interface Shippable<T> {
+
+    void ship(T t);
+}
+
+class ShippableRobotCrate implements Shippable<Robot> {
+
+    @Override
+    public void ship(Robot robot) {
+
+    }
+}
+
+class ShippableAbstractCrate implements Shippable {
+
+    @Override
+    public void ship(Object o) {
+
+    }
+    public static <T> Crate<T> shop(T t) {
+        System.out.println("Preparing " + t);
+        return new Crate<T>();
+    }
+}
+
+
+class ShippableCrate<U> implements Shippable<U> {
+
+    @Override
+    public void ship(U u) {
 
     }
 }
