@@ -25,9 +25,9 @@ public class LegacyDragons {
 
     public static void main(String[] args) {
 
-     List unicorns = new ArrayList();
+     List<Dragon> unicorns = new ArrayList<>();
 
-     unicorns.add(new Unicorn());
+    // unicorns.add(new Unicorn());
 
      printDragons(unicorns);
     }
