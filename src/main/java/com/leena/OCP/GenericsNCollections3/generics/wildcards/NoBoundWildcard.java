@@ -1,5 +1,6 @@
 package com.leena.OCP.GenericsNCollections3.generics.wildcards;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,6 +15,10 @@ public class NoBoundWildcard {
         }
         System.out.println();
 
+    }
+
+    public static void printList(List<?> list) {
+        for (Object x: list) System.out.println(x);
     }
 
     public static void main(String[] args) {
@@ -31,6 +36,12 @@ public class NoBoundWildcard {
         printElement(list);
 
         printElement(listDouble);
+
+        List<String> keywords = new ArrayList<>();
+
+        keywords.add("java");
+        keywords.add("java2");
+        printList(keywords);
 
     }
 }

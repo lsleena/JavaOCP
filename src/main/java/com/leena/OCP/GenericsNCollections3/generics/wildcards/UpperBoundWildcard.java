@@ -29,6 +29,10 @@ public class UpperBoundWildcard {
 
     }
 
+    private void anyFlyer(List<Flyer> flyer) {}
+
+    private void groupOfFlyers(List<? extends Flyer> flyers) {}
+
     public static void main(String[] args) {
 
         List<Integer> list = Arrays.asList(1, 2, 3, 34, 45);
@@ -50,7 +54,38 @@ public class UpperBoundWildcard {
 
 
          */
+        //--------------------------------------------
+        /*
+        List<Number> n = new ArrayList<Integer>();
+        Error:(55, 26) java: incompatible types: java.util.ArrayList<java.lang.Integer> cannot be converted to java.util.List<java.lang.Number>
+        */
+
+        List<? extends Bird> birds = new ArrayList<Bird>();
+        //birds.add(new Sparrow()); // DOES NOT COMPILE
+        //birds.add(new Bird()); // DOES NOT COMPILE
 
 
     }
 }
+ class Bird { }
+
+ class Sparrow extends Bird { }
+
+
+ interface Flyer { void fly();}
+
+ class HangGlider implements Flyer {
+
+     @Override
+     public void fly() {
+
+     }
+ }
+
+ class Goose implements Flyer {
+
+     @Override
+     public void fly() {
+
+     }
+ }
