@@ -30,7 +30,7 @@ public class App {
         System.out.println(birds.remove("hawk"));
 
         birds.clear();
-        System.out.println("\nIs empty: " + birds.isEmpty());
+        System.out.println("\nIs empty: " + birds.isEmpty() + "\n");
 
         Set<Integer> sets = new HashSet<>();
         boolean b1 = sets.add(2);
@@ -38,6 +38,44 @@ public class App {
         boolean b3 = sets.add(66);
 
         for (Integer integer: sets) System.out.print(integer + "  ");
+
+
+        System.out.println("\nTesting NavigableSet:");
+
+        NavigableSet<Integer> set1 =  new TreeSet<>();
+        for(int i = 0; i <= 20; i++) set1.add(i);
+        System.out.println(set1);
+
+        System.out.println(set1.lower(10));
+
+        System.out.println(set1.floor(10));
+        System.out.println(set1.ceiling(20));
+        System.out.println(set1.higher(20));
+
+
+
+
+
+        System.out.println("\nTesting Queue:\n");
+
+        Queue<Integer> queue = new ArrayDeque<>();
+
+        System.out.println(queue.offer(10) + "  Queue:  " + queue);
+
+        System.out.println(queue.offer(4) + "  Queue:  " + queue);
+
+
+
+        System.out.println(queue.peek() + "  Queue:  " + queue);
+
+        System.out.println(queue.poll() + "  Queue:  " + queue);
+        System.out.println(queue.peek());
+        System.out.println(queue.offer(22) + "  Queue:  " + queue);
+
+        System.out.println(queue.offer(34) + "  Queue:  " + queue);
+
+
+
     }
 
 }
