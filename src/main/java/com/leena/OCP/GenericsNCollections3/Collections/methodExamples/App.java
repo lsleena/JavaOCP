@@ -19,7 +19,7 @@ public class App {
 
         System.out.println(set.add("Hello"));
 
-        System.out.println(set.add("Hello"));
+        System.out.println("Duplicate in SET: " + set.add("Hello"));
 
         List<String> birds = new ArrayList<>();
         birds.add("hawk");
@@ -32,7 +32,12 @@ public class App {
         birds.clear();
         System.out.println("\nIs empty: " + birds.isEmpty());
 
+        Set<Integer> sets = new HashSet<>();
+        boolean b1 = sets.add(2);
+        boolean b2 = sets.add(66);
+        boolean b3 = sets.add(66);
 
+        for (Integer integer: sets) System.out.print(integer + "  ");
     }
 
 }
