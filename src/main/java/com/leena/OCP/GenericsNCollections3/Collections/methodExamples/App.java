@@ -74,7 +74,20 @@ public class App {
 
         System.out.println(queue.offer(34) + "  Queue:  " + queue);
 
+        ArrayDeque<Integer> stack = new ArrayDeque<>();
 
+        stack.push(10);
+        stack.push(4);
+
+        System.out.println(stack.peek());
+
+        Map<Integer,String> map = new HashMap<>();
+
+        map.put(1,"Leena");
+
+        System.out.println("\nTesting Map:\n");
+
+        System.out.println(map);
 
     }
 
