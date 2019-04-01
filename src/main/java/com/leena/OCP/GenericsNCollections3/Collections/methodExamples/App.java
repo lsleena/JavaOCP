@@ -46,11 +46,11 @@ public class App {
         for(int i = 0; i <= 20; i++) set1.add(i);
         System.out.println(set1);
 
-        System.out.println(set1.lower(10));
+        System.out.println(set1.lower(3));
 
-        System.out.println(set1.floor(10));
-        System.out.println(set1.ceiling(20));
-        System.out.println(set1.higher(20));
+        System.out.println(set1.floor(5));
+        System.out.println(set1.ceiling(10));
+        System.out.println(set1.higher(16));
 
 
 
@@ -81,13 +81,52 @@ public class App {
 
         System.out.println(stack.peek());
 
-        Map<Integer,String> map = new HashMap<>();
+        Map<Integer,String> map1 = new HashMap<>();
 
-        map.put(1,"Leena");
+        map1.put(1,"Leena");
 
-        System.out.println("\nTesting Map:\n");
+        System.out.println("\nTesting Map using HashMap:\n");
 
-        System.out.println(map);
+        System.out.println(map1);
+
+        Map<String, String> map = new HashMap<>();
+        map.put("koala", "bamboo");
+        map.put("lion", "meat");
+        map.put("giraffe", "leaf");
+
+        System.out.println("Map before No Leaf:\n " + map);
+        map.put("giraffe", "no leaf");
+        String food = map.get("koala"); // bamboo
+        for (String key: map.keySet())
+            System.out.print(key + ","); // koala,giraffe,lion,
+
+        System.out.println("Map After Leaf:\n " + map);
+
+        System.out.println("\nTesting Map using TreeMap:\n");
+
+
+        Map<String, String>  map2 = new TreeMap<>();
+
+        map2.put("hoala", "bamboo");
+        map2.put("jion", "meat");
+        map2.put("qiraffe", "leaf");
+
+        System.out.println("Map before No Leaf:\n " + map);
+        map2.put("giraffe", "no leaf");
+        String food1 = map2.get("koala"); // bamboo
+        for (String key: map2.keySet())
+            System.out.print(key + ",\n");
+
+        Map<String, String> map3 = new TreeMap<>();
+        map3.put("zoala", "bamboo");
+        map3.put("lion", "meat");
+        map3.put("giraffe", "leaf");
+        String food2 = map3.get("koala"); // bamboo
+        System.out.println();
+        for (String key: map3.keySet())
+            System.out.print(key + "    ,    "); // giraffe,koala,lion,
+
+
 
     }
 
