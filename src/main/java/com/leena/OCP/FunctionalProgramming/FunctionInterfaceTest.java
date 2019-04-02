@@ -3,6 +3,21 @@ package com.leena.OCP.FunctionalProgramming;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
+/*
+Table 4 .1 Common functional interfaces
+FunctionalInterfaces #Parameters  ReturnType   SingleAbstractMethod
+-------------------------------------------------------------------
+Supplier<T>         |    0              T               get
+Consumer<T>         |    1(T)          void             accept
+BiConsumer<T, U>    |  2 (T, U)        void             accept
+Predicate<T>        |    1 (T)          boolean         test
+BiPredicate<T, U>   |   2 (T, U)        boolean         test
+Function<T, R>      |   1 (T)            R              apply
+BiFunction<T, U, R> |   2 (T, U)         R              apply
+UnaryOperator<T>    |   1 (T)            T              apply
+BinaryOperator<T>   |   2 (T, T)         T              apply
+ */
+
 public class FunctionInterfaceTest {
 
     public static void main(String args[]) {
