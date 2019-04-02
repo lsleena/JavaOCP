@@ -1,5 +1,9 @@
 package com.leena.OCP.FunctionalProgramming;
 
+import java.time.LocalDate;
+import java.util.function.BiFunction;
+import java.util.function.Supplier;
+
 interface Gorilla {
 
     String move();
@@ -12,11 +16,11 @@ public class GorillaFamily {
     void everyonePlay(boolean baby) {
 
         String approach = "amble";
-        //approach = "run";
+        approach = "run";
 
         play(() -> walk);
         play(() -> baby ? "hitch a ride" : "run");
-        play(() -> approach);
+        // play(() -> approach); Error:(19, 20) java: local variables referenced from a lambda expression must be final or effectively final
 
     }
 
@@ -28,6 +32,10 @@ public class GorillaFamily {
     public static void main(String args[]) {
 
         GorillaFamily gf = new GorillaFamily();
-        gf.everyonePlay(true);
-    }
+        gf.everyonePlay(false);
+
+
+
+     }
 }
+
