@@ -33,7 +33,13 @@ public class OptionalTest {
 
         if(opt.isPresent()) {
 
-            System.out.println(opt1.get());
+          //  System.out.println(opt1.get()); //Exception in thread "main" java.util.NoSuchElementException: No value present
+
         }
+        Optional o = (opt1 == null) ? Optional.empty(): Optional.of(opt1);
+        Optional<Double> op = average();
+         System.out.println(op.orElse(Double.NaN));
+         System.out.println(op.orElseGet(() -> Math.random()));
+         System.out.println(op.orElseThrow(() -> new IllegalStateException()));
     }
 }
