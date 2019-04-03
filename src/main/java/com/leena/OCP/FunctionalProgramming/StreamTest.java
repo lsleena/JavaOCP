@@ -63,6 +63,44 @@ public class StreamTest {
        List<Integer> list1 = fromArray.collect(Collectors.toList());
         System.out.println();
         System.out.println(list1);
+
+        System.out.println();
+
+        List<String> str = Arrays.asList("a","b","c");
+
+
+        str.forEach(System.out::println);
+
+        Stream<String> stringStream = str.stream();
+
+        Stream<String> parallelStream = str.parallelStream();
+
+        Stream<Double> randoms = Stream.generate(Math::random);
+
+
+        //randoms.forEach(System.out::println);
+
+        System.out.println("Terminal Operation Output: \n");
+        System.out.println("count():");
+
+        Stream<String> countExample = Stream.of("Leena", "Jiya", "Navya");
+
+        System.out.println(countExample.count());
+
+        System.out.println("min() and max():");
+
+        /*
+        min() an dmax() Methid signature as:
+        Optional<T> min(<? super T> comparator)
+        Optional<T> max(<? super T> comparator)
+         */
+        Stream<String> s = Stream.of("monkey", "ape", "bonobo");
+        Optional<String> min = s.min((s1, s2) -> s1.length() - s2.length());
+
+        min.ifPresent(System.out::println);
+
+
+
     }
 
 }
