@@ -1,5 +1,6 @@
 package com.leena.OCP.FunctionalProgramming;
 
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.*;
@@ -81,13 +82,13 @@ public class StreamTest {
         //randoms.forEach(System.out::println);
 
         System.out.println("Terminal Operation Output: \n");
-        System.out.println("count():");
+        System.out.println("Testing of : count():");
 
         Stream<String> countExample = Stream.of("Leena", "Jiya", "Navya");
 
         System.out.println(countExample.count());
 
-        System.out.println("min() and max():");
+        System.out.println("Testing of : min() and max():");
 
         /*
         min() an dmax() Methid signature as:
@@ -100,6 +101,31 @@ public class StreamTest {
         min.ifPresent(System.out::println);
 
 
+        System.out.println("Testing of : findAny() and findFirst() methods :");
+        /*
+        Optional<T> findAny()
+        Optional<T> findFirst()
+        */
+        Stream<String> findString = Stream.of("Chimpazee","Gorilla","Baboon");
+        Stream<String> infinite = Stream.generate(() -> "chimp");
+        findString.findAny().ifPresent(System.out::println);
+        infinite.findAny().ifPresent(System.out::println);
+
+        System.out.println("Testing of : allMatch() , anyMatch() and noneMatch()");
+
+        /*
+        boolean anyMatch(Predicate <? super T> predicate)
+        boolean allMatch(Predicate <? super T> predicate)
+        boolean noneMatch(Predicate <? super T> predicate)
+         */
+
+        List<String> list2 = Arrays.asList("monkey", "2", "chimp");
+        Stream<String> infinite1 = Stream.generate(() -> "chimp");
+        Predicate<String> pred = x -> Character.isLetter(x.charAt(0));
+        System.out.println(list2.stream().anyMatch(pred)); // true
+        System.out.println(list2.stream().allMatch(pred)); // false
+        System.out.println(list2.stream().noneMatch(pred)); // false
+        System.out.println(infinite1.anyMatch(pred)); // true
 
     }
 
