@@ -1,5 +1,6 @@
 package com.leena.OCP.FunctionalProgramming;
 
+import java.util.function.BinaryOperator;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -126,6 +127,51 @@ public class StreamTest {
         System.out.println(list2.stream().allMatch(pred)); // false
         System.out.println(list2.stream().noneMatch(pred)); // false
         System.out.println(infinite1.anyMatch(pred)); // true
+
+        System.out.println("Testing of : foreach() ");
+
+        /*
+        void forEach(Consumer<? super T> action)
+         */
+
+        Stream<String> stringStream1 = Stream.of("MOnkeys","Zebra","Cow","BUffello");
+        stringStream1.forEach(System.out::print);
+
+        System.out.println("Testing of : reduce() ");
+
+        String[] array = new String[] { "w", "o", "l", "f" };
+        String result = "";
+        for (String s1: array) result = result + s1;
+        System.out.println(result);
+
+        Stream<String> stream = Stream.of("w", "o", "r", "k");
+        String word = stream.reduce("", (s1, c) -> s1 + c);
+        System.out.println(word); // work
+
+        Stream<Integer> stream1 = Stream.of(3, 5, 6);
+        System.out.println(stream1.reduce(1, (a, b) -> a*b));
+
+        BinaryOperator<Integer> op = (a, b) -> a * b;
+        Stream<Integer> empty = Stream.empty();
+        Stream<Integer> oneElement = Stream.of(3);
+        Stream<Integer> threeElements = Stream.of(3, 5, 6);
+        System.out.println();
+        empty.reduce(op).ifPresent(System.out::print); // no output
+        System.out.println();
+        oneElement.reduce(op).ifPresent(System.out::print); // 3
+        System.out.println();
+        threeElements.reduce(op).ifPresent(System.out::print); // 90
+
+        System.out.println("\nTesting of : collect()\n ");
+        /*
+        <R> R collect(Supplier<R> supplier, BiConsumer<R, ? super T> accumulator,
+        BiConsumer<R, R> combiner)
+        <R,A> R collect(Collector<? super T, A,R> collector)
+         */
+        Stream<String> stream2 = Stream.of("g", "o", "l", "f");
+        StringBuilder word1 = stream2.collect(StringBuilder::new, StringBuilder::append, StringBuilder::append);
+        System.out.println(word1);
+
 
     }
 
