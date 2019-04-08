@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.*;
 
-public class StreamTest {
+public class StreamTerminalOpTest {
 
 
     // Function convert a List into Stream
