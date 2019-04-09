@@ -1,6 +1,4 @@
-package com.leena.OCP.FunctionalProgramming;
-
-import org.omg.PortableInterceptor.INACTIVE;
+package com.leena.OCP.FunctionalProgramming4;
 
 import java.util.*;
 import java.util.function.Consumer;

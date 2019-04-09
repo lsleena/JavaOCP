@@ -1,4 +1,4 @@
-package com.leena.OCP.FunctionalProgramming;
+package com.leena.OCP.FunctionalProgramming4;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,7 +12,7 @@ public class StreamIntermediateOpTest {
         Stream<T> filter(Predicate<? super T> predicate)
          */
 
-        System.out.println("Filter Example:\n");
+        System.out.println("Filter() Example:");
 
         Stream<String> stream = Stream.of("FOX","LION","BEAR","TIGER");
 
@@ -22,5 +22,12 @@ public class StreamIntermediateOpTest {
         Stream<String> stream1 = Stream.of("FOX","LION","BEAR","TIGER");
 
         stream1.filter(x -> x.startsWith("T")).forEach(System.out::print);
+
+        System.out.println("\n Distinct() Example:");
+
+        Stream<String> stream2 = Stream.of("FOX","FOX","BEAR","TIGER");
+
+        stream2.distinct().forEach(System.out::print);
+
     }
 }

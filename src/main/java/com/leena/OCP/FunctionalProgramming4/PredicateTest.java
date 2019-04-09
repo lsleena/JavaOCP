@@ -1,13 +1,7 @@
-package com.leena.OCP.FunctionalProgramming;
+package com.leena.OCP.FunctionalProgramming4;
 
-import java.util.function.*;
-/*
-
-@FunctionalInterface public class UnaryOperator<T>
-        extends Function<T, T> { }
-@FunctionalInterface public class BinaryOperator<T>
-        extends BiFunction<T, T, T> { }
-*/
+import java.util.function.BiPredicate;
+import java.util.function.Predicate;
 
 /*
 Table 4 .1 Common functional interfaces
@@ -24,25 +18,27 @@ UnaryOperator<T>    |   1 (T)            T              apply
 BinaryOperator<T>   |   2 (T, T)         T              apply
  */
 
-public class UnaryOperatorTest {
+public class PredicateTest {
 
     public static void main(String[] args) {
 
-        UnaryOperator<String> u1 = String::toUpperCase;
-        UnaryOperator<String> u2 = x -> x.toUpperCase();
+        Predicate<String> p1 = String::isEmpty;
 
-        System.out.println(u1.apply("leena"));
-
-        System.out.println(u1.apply("computer"));
+        Predicate<String> p2 = x -> x.isEmpty();
 
 
-        BinaryOperator<String> b1 = (x, y) -> x.concat(y);
+        System.out.println(p1.test(""));
+        System.out.println(p2.test("Hello JAVA"));
 
-        BinaryOperator<String> b2 = (string, toAdd) -> string.concat(toAdd);
+        BiPredicate<String, String> b1 = String::startsWith;
 
-        System.out.println(b1.apply("Leena " , "Patil"));
+        BiPredicate<String, String> b2 =  (string, prefix) -> string.startsWith(prefix);
 
-        System.out.println(b1.apply("Java " , " Program"));
+
+        System.out.println("Is Leena starts with L: " + b1.test("Leena","L"));
+        System.out.println("Is Leena starts with m: " + b2.test("Leena","m"));
+
+
 
     }
 }

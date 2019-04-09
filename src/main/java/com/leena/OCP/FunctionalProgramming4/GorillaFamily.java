@@ -1,8 +1,4 @@
-package com.leena.OCP.FunctionalProgramming;
-
-import java.time.LocalDate;
-import java.util.function.BiFunction;
-import java.util.function.Supplier;
+package com.leena.OCP.FunctionalProgramming4;
 
 interface Gorilla {
 
