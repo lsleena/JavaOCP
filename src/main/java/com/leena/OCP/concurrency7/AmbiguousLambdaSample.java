@@ -5,8 +5,7 @@ import java.util.function.Supplier;
 
 public class AmbiguousLambdaSample {
 
-    public static void useCallable(Callable<Integer> expression) { }
-
+    public static void useCallable(Callable<Integer> expression) {}
 
     public static void useSupplier(Supplier<Integer> expression) {}
 
