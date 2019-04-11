@@ -2,7 +2,7 @@ package com.leena.OCP.concurrency7;
 
 import java.util.concurrent.*;
 
-public class AddData {
+public class AwaitTerminationTest {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
