@@ -12,11 +12,13 @@ public class CheckResults {
             for (int i = 0; i < 500; i++ ) CheckResults.counter++;
         }).start();
 
-        while (CheckResults.counter < 1000) {
+        while (CheckResults.counter < 100) {
             System.out.println("Not reached yet");
             Thread.sleep(1000);
         }
 
         System.out.println("Reached");
+        System.out.println("Available Processors:  " + Runtime.getRuntime().availableProcessors());
+
     }
 }

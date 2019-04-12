@@ -1,15 +1,22 @@
 package com.leena.OCP.concurrency7;
 
-// Java program to illustrate
-// ThreadPool
+/*
+
+1. Create a task(Runnable Object) to execute
+2. Create Executor Pool using Executors
+3. Pass tasks to Executor Pool
+4. Shutdown the Executor Pool
+
+*/
+
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 // Task class to be executed (Step 1)
-class Task implements Runnable
-{
+class Task implements Runnable {
     private String name;
 
     public Task(String s)
@@ -19,8 +26,7 @@ class Task implements Runnable
 
     // Prints task name and sleeps for 1s
     // This Whole process is repeated 5 times
-    public void run()
-    {
+    public void run() {
         try
         {
             for (int i = 0; i<=5; i++)
@@ -52,13 +58,11 @@ class Task implements Runnable
         }
     }
 }
-public class ThreadPoolExample
-{
+public class ThreadPoolExample {
     // Maximum number of threads in thread pool
     static final int MAX_T = 3;
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         // creates five tasks
         Runnable r1 = new Task("task 1");
         Runnable r2 = new Task("task 2");
@@ -76,7 +80,6 @@ public class ThreadPoolExample
         pool.execute(r3);
         pool.execute(r4);
         pool.execute(r5);
-
         // pool shutdown ( Step 4)
         pool.shutdown();
     }
