@@ -2,17 +2,34 @@ package com.leena.OCP.concurrency7;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ConcurrentCollectionExample {
 
-    private Map<String, Object> foodData = new HashMap<String, Object>();
+ /*
+
+  private Map<String, Object> foodData = new HashMap<String, Object>();
 
     public synchronized void put(String key, Object value) {
 
         foodData.put(key, value);
     }
 
-    public synchronized Object get(String key) {
+
+     public synchronized Object get(String key) {
+
+        return foodData.get(key);
+    }
+   */
+
+    private Map<String,Object> foodData = new ConcurrentHashMap<String,Object>();
+
+    public  void put(String key, Object value) {
+
+        foodData.put(key, value);
+    }
+
+    public  Object get(String key) {
 
         return foodData.get(key);
     }
@@ -26,3 +43,18 @@ public class ConcurrentCollectionExample {
         System.out.println(example.get("name"));
     }
 }
+/*
+public class ZooManager {
+
+private Map<String,Object> foodData = new ConcurrentHashMap<String,Object>();
+
+public void put(String key, String value) {
+foodData.put(key, value);
+}
+
+public Object get(String key) {
+return foodData.get(key);
+}
+
+}
+ */
