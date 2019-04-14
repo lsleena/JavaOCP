@@ -1,8 +1,12 @@
 package com.leena.OCP.concurrency7;
 
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Queue;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class ConcurrentCollectionExample {
 
@@ -41,6 +45,34 @@ public class ConcurrentCollectionExample {
         example.put("name", 1);
 
         System.out.println(example.get("name"));
+
+
+        Map<String, Integer> map = new ConcurrentHashMap<>();
+        map.put("Leena",6);
+        map.put("JIya",2);
+        System.out.println(map.get("Leena"));
+
+        Queue<String> queue = new ConcurrentLinkedQueue();
+
+        queue.offer("Leena");
+        System.out.println(queue.peek());
+        System.out.println(queue.poll());
+
+        System.out.println(queue.peek());
+        System.out.println(queue.offer("HI")+ " \n" + queue.peek());
+
+        Deque<Integer> deque = new ConcurrentLinkedDeque<>();
+        deque.offer(45);
+
+        deque.push(67);
+        deque.push(90);
+//        System.out.println(deque.getFirst());
+        System.out.println(deque.peek());
+        System.out.println(deque.pop());
+        System.out.println(deque.peek());
+        System.out.println(deque.pop());
+        System.out.println(deque.peek());
+
     }
 }
 /*
