@@ -53,6 +53,13 @@ public class ParalleStreamExample {
         double time = (System.currentTimeMillis() - start) / 1000.0;
 
         // Report results
-        System.out.println("\nTasks completed in: "+time+" seconds");
+        System.out.println("\nTasks completed in: "+time+" seconds"); //Tasks completed in: 5.612 seconds
+
+        //Understanding Independant Operation
+
+        Arrays.asList("  jackel   ","   lion    ","  lamb   ")
+                .parallelStream()
+                .map(s -> s.toUpperCase())
+                .forEach(System.out::print);
     }
 }
