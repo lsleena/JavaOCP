@@ -9,17 +9,16 @@ class WhaleDataCalculator {
 
         try {
             Thread.sleep(10);
-        }
-        catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             System.out.println(e);
         }
         return input + 1;
     }
 
-   /* public void processedAllData(List<Integer> data) {
+    /* public void processedAllData(List<Integer> data) {
 
-        data.stream().map(a -> processRecord(a)).count();
-    } */
+         data.stream().map(a -> processRecord(a)).count();
+     } */
     public void processAllData(List<Integer> data) {
         data.parallelStream().map(a -> processRecord(a)).count();
     }
@@ -29,7 +28,7 @@ public class ParalleStreamExample {
 
     public static void main(String[] args) {
 
-        Stream<Integer> stream = Arrays.asList(1,2,3,4,5,6,7).stream();
+        Stream<Integer> stream = Arrays.asList(1, 2, 3, 4, 5, 6, 7).stream();
 
         Stream<Integer> parallelStream = stream.parallel();
 
@@ -37,7 +36,7 @@ public class ParalleStreamExample {
 
         System.out.println("\n");
 
-        Arrays.asList(21,22,23,24,25,6)
+        Arrays.asList(21, 22, 23, 24, 25, 6)
                 .parallelStream().forEachOrdered(s -> System.out.print(s + "   "));
 
 
@@ -45,7 +44,7 @@ public class ParalleStreamExample {
 
         List<Integer> arryList = new ArrayList<>();
 
-        for (int i = 0; i<4000; i++) arryList.add(i);
+        for (int i = 0; i < 4000; i++) arryList.add(i);
 
         Long start = System.currentTimeMillis();
 
@@ -53,13 +52,22 @@ public class ParalleStreamExample {
         double time = (System.currentTimeMillis() - start) / 1000.0;
 
         // Report results
-        System.out.println("\nTasks completed in: "+time+" seconds"); //Tasks completed in: 5.612 seconds
+        System.out.println("\nTasks completed in: " + time + " seconds"); //Tasks completed in: 5.612 seconds
 
-        //Understanding Independant Operation
+        //Understanding Independent Operation
 
-        Arrays.asList("  jackel   ","   lion    ","  lamb   ")
+        Arrays.asList("  jackel   ", "   lion    ", "  lamb   ")
                 .parallelStream()
                 .map(s -> s.toUpperCase())
+                .forEach(System.out::print);
+
+        Arrays.asList(" leena ", " jiya ", " navya ")
+                .parallelStream()
+                .map(s ->
+                {
+                    System.out.println(s);
+                    return s.toUpperCase();
+                })
                 .forEach(System.out::print);
     }
 }
