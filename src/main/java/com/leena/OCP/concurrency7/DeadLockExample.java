@@ -12,6 +12,7 @@ public class DeadLockExample {
     public void eatAndDrink(Food food, Water water) {
 
         synchronized (food){
+
             System.out.println("GOt Food");
 
             move();
