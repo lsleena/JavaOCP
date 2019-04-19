@@ -27,10 +27,7 @@ public class CopyTextFileSample {
 
                 writer.newLine();
             }
-
         }
-
-
     }
 
     public static void main(String[] args) throws IOException {
