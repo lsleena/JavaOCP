@@ -5,6 +5,7 @@ import java.util.concurrent.ExecutorService;
 public class CheckResults {
 
     private static int counter = 0;
+    static  String str = "_tr";
 
     public static void main(String[] args) throws InterruptedException {
         ExecutorService service = null;
@@ -17,6 +18,7 @@ public class CheckResults {
             Thread.sleep(1000);
         }
 
+        System.out.println(CheckResults.str);
         System.out.println("Reached");
         System.out.println("Available Processors:  " + Runtime.getRuntime().availableProcessors());
 
