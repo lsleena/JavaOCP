@@ -35,5 +35,7 @@ public class LocaleExample {
 
         System.out.println(l1+"\n"+l2);
 
+
+
     }
  }
