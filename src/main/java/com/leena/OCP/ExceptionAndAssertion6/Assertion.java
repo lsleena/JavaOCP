@@ -1,12 +1,10 @@
 package com.leena.OCP.ExceptionAndAssertion6;
 
-import static com.leena.OCP.ExceptionAndAssertion6.Seasons.SUMMER;
+//import static com.leena.OCP.ExceptionAndAssertion6.Seasons.SUMMER;
 
- enum Seasons {
-    SPRING, SUMMER, FALL
-}
+
 public class Assertion {
-
+/*
 
     public static void test(Seasons s) {
         switch (s) {
@@ -21,14 +19,16 @@ public class Assertion {
                 assert false : "Invalid season";
         }
     }
-
+*/
     public static void main(String[] args) {
 
-      /*  int num = -5;
+       int num = -5;
         assert num > 0;
-        System.out.println(num);*/
+        System.out.println(num);
 
-      Assertion.test(WINTER);
+    //  Assertion.test(WINTER);
+
+        //Assertion.test(Seasons.WINTER);
 
     }
 }
