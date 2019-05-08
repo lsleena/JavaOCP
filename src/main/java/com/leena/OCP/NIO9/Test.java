@@ -11,7 +11,7 @@ public class Test {
 
     public static void main(String[] args) throws URISyntaxException {
 
-        Path path   = Paths.get("/window/file");
+        Path pat   = Paths.get("/window/file");
 
         Path path1 = Paths.get("C:","First","Dir" +
                 "ik");
@@ -19,8 +19,8 @@ public class Test {
         Path path2 = Paths.get("c:","zooinfo","November","employees.txt");
         Path path3 = Paths.get("/","home","zoodirector");
         Path pat3 = Paths.get(new URI("file:///home/zoodirectory"));
-        Path path4 = Paths.get(new URI("http://www.wiley.com"));
-        URI uri4 = path4.toUri();
+//        Path path4 = Paths.get(new URI("http://www.wiley.com"));
+  //      URI uri4 = path4.toUri();
 
         Path pathFilesystem = FileSystems.getDefault().getPath("c:","zooinfo","November",
                 "employees.txt");
@@ -29,5 +29,11 @@ public class Test {
         Path pathFile = file.toPath();
 
         File file1 = pathFile.toFile();
+
+        Path path = Paths.get("/mammal/carnivore/raccoon.image");
+        System.out.println("Path is: "+path);
+        System.out.println("Subpath from 0 to 3 is: "+path.subpath(0,3));
+        System.out.println("Subpath from 1 to 3 is: "+path.subpath(1,3));
+        System.out.println("Subpath from 1 to 2 is: "+path.subpath(1,2));
     }
 }
