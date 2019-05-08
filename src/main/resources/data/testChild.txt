@@ -1,1 +1,5 @@
 This is inside parent(resources) folder
+
+Absolute path :: /Users/leenapatil/workspace/JavaOCP/src/main/resources/data/testChild.txt
+
+Relative path :: data/testChild.txt
