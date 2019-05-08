@@ -15,7 +15,7 @@ public class PathFilePathTest {
         System.out.println();
         printPathInformation(Paths.get("armadillo/shells.txt"));
 
-        Path path1 = Paths.get("C:\\birds\\egret.txt");
+        Path path1 = Paths.get("/Users/leenapatil/workspace/JavaOCP/src/main/resources/calendar.csv");
         System.out.println("Path1 is Absolute? "+path1.isAbsolute());
         System.out.println("Absolute Path1: "+path1.toAbsolutePath());
         Path path2 = Paths.get("birds/condor.txt");
