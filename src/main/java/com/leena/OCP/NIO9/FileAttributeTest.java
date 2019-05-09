@@ -9,6 +9,6 @@ public class FileAttributeTest {
 
         System.out.println(Files.isDirectory(Paths.get("/canine/coyote/fur.jpg")));
         System.out.println(Files.isRegularFile(Paths.get("/canine/types.txt")));
-        System.out.println(Files.isSymbolicLink(Paths.get("/canine/coyote")));
+        System.out.println(Files.isSymbolicLink(Paths.get("/Users/leenapatil/workspace/JavaOCP/src/main/resources")));
     }
 }
