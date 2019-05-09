@@ -35,5 +35,6 @@ public class Test {
         System.out.println("Subpath from 0 to 3 is: "+path.subpath(0,3));
         System.out.println("Subpath from 1 to 3 is: "+path.subpath(1,3));
         System.out.println("Subpath from 1 to 2 is: "+path.subpath(1,2));
+
     }
 }
