@@ -11,9 +11,9 @@ public class Test1 {
         try (InputStream is = new FileInputStream("/Users/leenapatil/workspace/JavaOCP/src/main/resources/test1.txt");
              OutputStream out = new FileOutputStream("/Users/leenapatil/workspace/JavaOCP/src/main/resources/test2.txt")) {
 // Copy stream data to file
-            Files.copy(is, Paths.get("/Users/leenapatil/workspace/JavaOCP/src/main/resources/test2.txt"));
+       //     Files.copy(is, Paths.get("/Users/leenapatil/workspace/JavaOCP/src/main/resources/test2.txt"));
 // Copy file data to stream
-            Files.copy(Paths.get("/Users/leenapatil/workspace/JavaOCP/src/main/resources/test1.txt"), out);
+            Files.move(Paths.get("/Users/leenapatil/workspace/JavaOCP/src/main/resources/data/Test/testMove.txt"), Paths.get("/Users/leenapatil/workspace/JavaOCP/src/main/resources/data/Test1"));
         } catch (IOException e) {
 // Handle file I/O exception...
         }
