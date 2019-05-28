@@ -13,7 +13,7 @@ public class DeadLockExample {
 
         synchronized (food){
 
-            System.out.println("GOt Food");
+            System.out.println("FOXY GOt Food");
 
             move();
 
@@ -28,7 +28,7 @@ public class DeadLockExample {
     public void drinkAndEat(Food food, Water water) {
 
         synchronized (water){
-            System.out.println("GOt water");
+            System.out.println("Tails GOt water");
 
             move();
 

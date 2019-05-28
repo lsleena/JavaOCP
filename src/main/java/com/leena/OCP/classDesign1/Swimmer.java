@@ -3,9 +3,10 @@ package com.leena.OCP.classDesign1;
 public class Swimmer {
 
     enum AnimalClasses {
-        MAMMAL, FISH {
-            public boolean hasFins() { return true; }},
-        BIRD, REPTILE, AMPHIBIAN, INVERTEBRATE;
+        MAMMAL{
+            public boolean hasFins() { return true; }}, FISH {
+            public boolean hasFins() { return true; }};
+   //     BIRD, REPTILE, AMPHIBIAN, INVERTEBRATE;
         public abstract boolean hasFins();
     }
 
@@ -14,6 +15,6 @@ public class Swimmer {
         System.out.println(AnimalClasses.FISH);
         System.out.println(AnimalClasses.FISH.ordinal());
         System.out.println(AnimalClasses.FISH.hasFins());
-        System.out.println(AnimalClasses.BIRD.hasFins());
+    //    System.out.println(AnimalClasses.BIRD.hasFins());
     }
 }

@@ -8,9 +8,20 @@ public class Tets {
 
         System.out.println( calc(c));
 
+        z.leena();
+
     }
     public static int calc(int n) {
 
         return n;
+    }
+    }
+
+
+    interface z{
+
+    static void leena(){
+
+        System.out.println("Leena sunil partil");
     }
     }
