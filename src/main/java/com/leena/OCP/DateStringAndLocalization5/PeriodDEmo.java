@@ -11,6 +11,7 @@ public class PeriodDEmo {
          Period period = Period.ofMonths(1);
          System.out.println(date.plus(period)); // 2015–02–20
          System.out.println(dateTime.plus(period)); // 2015–02–20T06:15
+         System.out.println(Period.ofWeeks(5));
          System.out.println(time.plus(period)); // Exception in thread "main" java.time.temporal.UnsupportedTemporalTypeException: Unsupported unit: Months
     }
 }

@@ -1,7 +1,5 @@
 package com.leena.OCP.DateStringAndLocalization5;
 
-import com.sun.jmx.snmp.SnmpPduTrap;
-
 import java.time.*;
 
 public class InstantsExample {

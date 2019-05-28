@@ -61,6 +61,9 @@ class WeighAnimalTask extends RecursiveTask<Double> {
             }
             return sum;
         } else {
+            System.out.println("End is :" + end);
+
+            System.out.println("start is :" + start);
             int middle = start + ((end - start) / 2);
             System.out.println("[start=" + start + ",middle=" + middle + ",end=" + end + "]");
 

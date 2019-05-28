@@ -1,7 +1,9 @@
 package com.leena.OCP.FunctionalProgramming4;
 
+import java.util.TreeSet;
 import java.util.function.BiFunction;
 import java.util.function.Function;
+import java.util.stream.Stream;
 
 /*
 Table 4 .1 Common functional interfaces
@@ -42,6 +44,13 @@ public class FunctionInterfaceTest {
         TriFunction<String, String,String,String > triConcat = (x,y,z) -> x.concat(y).concat(z);
 
         System.out.println(triConcat.apply("Hello", " Java ", "World"));
+
+        Stream<Integer> fromArray = Stream.of(1,  3); // count = 2
+        System.out.println(fromArray.count());
+        Stream<String> stream = Stream.of("w", "o", "l", "z");
+        TreeSet<String> set = stream.collect(TreeSet::new, TreeSet::add,
+                TreeSet::addAll);
+        System.out.println(set); // [f, l, o, w]
     }
 }
 
