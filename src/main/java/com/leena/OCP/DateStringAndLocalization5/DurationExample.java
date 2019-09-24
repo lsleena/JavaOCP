@@ -14,11 +14,11 @@ public class DurationExample {
         Duration duration1 = Duration.ofSeconds(3600);
 
 
-        System.out.println(duration1);
+        System.out.println("Duration.ofSeconds(3600)   : " +duration1);
 
-        System.out.println(duration);
+        System.out.println("Duration.ofDays(24) : " +duration);
 
-        System.out.println(Duration.ofDays(2));
+        System.out.println("Duration.ofDays(2) : " +Duration.ofDays(2));
 
         System.out.println(Duration.ofDays(365));
 

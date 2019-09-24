@@ -55,11 +55,14 @@ public class ConcurrentCollectionExample {
         Queue<String> queue = new ConcurrentLinkedQueue();
 
         queue.offer("Leena");
-        System.out.println(queue.peek());
-        System.out.println(queue.poll());
+        System.out.println("Peek: "+queue.peek());
+        System.out.println("Poll : "+queue.poll());
 
         System.out.println(queue.peek());
+        queue.offer("Lna");
+
         System.out.println(queue.offer("HI")+ " \n" + queue.peek());
+        System.out.println(queue.offer("***Leena")+ " \n" + queue.peek());
 
         Deque<Integer> deque = new ConcurrentLinkedDeque<>();
         deque.offer(45);
@@ -68,10 +71,11 @@ public class ConcurrentCollectionExample {
         deque.push(90);
 //        System.out.println(deque.getFirst());
         System.out.println(deque.peek());
-        System.out.println(deque.pop());
+        System.out.println(deque.poll());
         System.out.println(deque.peek());
         System.out.println(deque.pop());
         System.out.println(deque.peek());
+        System.out.println(deque);
 
     }
 }

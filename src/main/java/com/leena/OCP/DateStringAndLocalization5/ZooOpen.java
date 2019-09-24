@@ -9,11 +9,15 @@ import java.util.Set;
 public class ZooOpen {
 
     public static void main(String[] args) {
+
+        Locale ch = new Locale.Builder().setLanguage("zh").setRegion("CN").build();
         Locale us = new Locale("en", "US");
         Locale france = new Locale("fr", "FR");
         printProperties(us);
         System.out.println();
          printProperties(france);
+
+         Locale l = Locale.CHINA;
         }
 
        public static void printProperties(Locale locale) {
