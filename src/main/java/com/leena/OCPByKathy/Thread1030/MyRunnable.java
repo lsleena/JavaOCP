@@ -1,4 +1,4 @@
-package com.leena.OCPByKathy.Thread;
+package com.leena.OCPByKathy.Thread1030;
 
 public class MyRunnable implements Runnable{
 
