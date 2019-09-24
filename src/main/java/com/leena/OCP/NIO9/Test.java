@@ -17,6 +17,7 @@ public class Test {
                 "ik");
 
         Path path2 = Paths.get("c:","zooinfo","November","employees.txt");
+        System.out.println("Path2 is :  " + path2);
         Path path3 = Paths.get("/","home","zoodirector");
         Path pat3 = Paths.get(new URI("file:///home/zoodirectory"));
 //        Path path4 = Paths.get(new URI("http://www.wiley.com"));
