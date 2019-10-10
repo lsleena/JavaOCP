@@ -15,13 +15,9 @@ public class AccountDanger implements Runnable {
         one.setName("fred");
 
         two.setName("lucy");
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
         one.start();
         two.start();
-
 
     }
 
