@@ -1,8 +1,5 @@
 package com.leena.OCPByKathy.Thread1030.DeadLock;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
 public class DeadLockRisk extends Thread{
 
     private static class Resource {

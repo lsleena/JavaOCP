@@ -26,7 +26,9 @@ public class TestShow {
         getSeat2.start();
     }
 
-    public void ticketAgentsBooks(String seats) {
+    public synchronized void ticketAgentsBooks(String seats) {
+
+
         Show show = Show.getINSTANCE();
 
         System.out.println(Thread.currentThread().getName() + " : " +

@@ -6,7 +6,7 @@ import java.util.Set;
 public class Show {
 
     private static volatile Show INSTANCE;
-    private Set<String> avialableSeats;
+    private Set<String> availableSeats;
 
     public static synchronized Show getINSTANCE() {
 
@@ -18,15 +18,15 @@ public class Show {
 
     private Show() {
 
-        avialableSeats = new HashSet<String>();
-        avialableSeats.add("1A");
-        avialableSeats.add("1B");
+        availableSeats = new HashSet<String>();
+        availableSeats.add("1A");
+        availableSeats.add("1B");
 
     }
 
-    public boolean bookSeat(String seat) {
-        System.out.println("Entering Booking Window of 2 tickets: ");
-        return avialableSeats.remove(seat);
+    public  boolean bookSeat(String seat) {
+      //  System.out.println("Entering Booking Window of 2 tickets: ");
+        return availableSeats.remove(seat);
     }
 
 }
